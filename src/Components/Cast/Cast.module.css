@@ -1,0 +1,26 @@
+.list {
+  padding: 50px;
+  padding-left: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style-type: none;
+}
+
+.item {
+  text-align: center;
+  width: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.img {
+  height: 200px;
+}
+
+.character {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+}

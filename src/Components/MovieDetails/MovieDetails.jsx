@@ -11,6 +11,8 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import Reviews from '../Reviews';
+import Cast from '../Cast';
 import Loader from '../Loader';
 import arrow from '../../images/arrow.svg';
 import { fetchMovieDetails } from '../../services/filmsAPI';
@@ -97,8 +99,8 @@ const MovieDetails = () => {
         </ul>
         <Suspense fallback={<Loader />}>
           <Switch>
-            <Route exact path={`${path}/cast`} component={}></Route>
-            <Route exact path={`${path}/reviews`} component={}></Route>
+            <Route exact path={`${path}/cast`} component={Cast}></Route>
+            <Route exact path={`${path}/reviews`} component={Reviews}></Route>
           </Switch>
         </Suspense>
       </div>
