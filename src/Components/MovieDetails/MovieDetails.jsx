@@ -14,7 +14,6 @@ import {
 import Reviews from '../Reviews';
 import Cast from '../Cast';
 import Loader from '../Loader';
-import arrow from '../../images/arrow.svg';
 import { fetchMovieDetails } from '../../services/filmsAPI';
 import s from './MovieDetails.module.css';
 
@@ -40,8 +39,7 @@ const MovieDetails = () => {
     <>
       <div className={s.card}>
         <button className={s.button} onClick={handleClickBack}>
-          <img className={s.icon} src={arrow} alt="arrow" />
-          Go Back
+          <span className={s.arrow}></span>Go Back
         </button>
         {movie && (
           <>

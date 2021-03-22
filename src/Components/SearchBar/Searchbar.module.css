@@ -62,6 +62,7 @@
 
 .form_input::placeholder {
   font: inherit;
+  color: grey;
   font-size: 18px;
   opacity: 60%;
 }
