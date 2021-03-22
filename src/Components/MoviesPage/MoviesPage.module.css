@@ -26,5 +26,12 @@
 }
 
 .image {
+  object-fit: cover;
   height: 400px;
+  width: 250px;
+}
+
+.filmTitle {
+  display: block;
+  width: 250px;
 }

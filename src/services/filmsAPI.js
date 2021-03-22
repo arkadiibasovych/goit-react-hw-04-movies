@@ -18,7 +18,9 @@ const fetchSearchFilms = searchQuery => {
 };
 
 const fetchMovieDetails = movie_id => {
-  return axios.get(`movie/${movie_id}?api_key=${API_KEY}&language=en-US`);
+  return axios
+    .get(`movie/${movie_id}?api_key=${API_KEY}&language=en-US`)
+    .then(({ data }) => data);
 };
 
 export { fetchTrendingsFilms, fetchSearchFilms, fetchMovieDetails };

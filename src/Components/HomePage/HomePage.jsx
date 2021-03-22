@@ -4,14 +4,12 @@ import { Link } from 'react-router-dom';
 import { fetchTrendingsFilms } from '../../services/filmsAPI';
 import s from './HomePage.module.css';
 
-const HomePage = () => {
+const HomePage = props => {
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
     fetchTrendingsFilms().then(setFilms);
   }, []);
-
-  console.log(films);
 
   return (
     <>
