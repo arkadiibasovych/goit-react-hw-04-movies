@@ -1,41 +1,32 @@
 import { Route, NavLink, Switch } from 'react-router-dom';
-import HomePage from './Components/HomePage';
-import MoviesPage from './Components/MoviesPage';
-import MovieDetails from './Components/MovieDetails';
+import { Suspense, lazy } from 'react';
+import AppBar from './Components/AppBar';
+import Loader from './Components/Loader';
 
-import s from './App.module.css';
+const HomePage = lazy(() =>
+  import('./Components/HomePage' /* webpackChunkName: "HomePage" */),
+);
+
+const MoviesPage = lazy(() =>
+  import('./Components/MoviesPage' /* webpackChunkName: "MoviesPage" */),
+);
+
+const MovieDetails = lazy(() =>
+  import('./Components/MovieDetails' /* webpackChunkName: "MovieDetails" */),
+);
 
 const App = () => (
   <>
-    <ul className={s.list}>
-      <li className={s.listItem}>
-        <NavLink
-          exact
-          to="/"
-          className={s.navLink}
-          activeClassName={s.navLinkActive}
-        >
-          Home
-        </NavLink>
-      </li>
+    <AppBar />
+    <Suspense fallback={<Loader />}>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/movies/:movieId" component={MovieDetails} />
+        <Route path="/movies" component={MoviesPage} />
 
-      <li className={s.listItem}>
-        <NavLink
-          to="/movies"
-          className={s.navLink}
-          activeClassName={s.navLinkActive}
-        >
-          Movies
-        </NavLink>
-      </li>
-    </ul>
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/movies/:movieId" component={MovieDetails} />
-      <Route path="/movies" component={MoviesPage} />
-
-      <Route component={HomePage} />
-    </Switch>
+        <Route component={HomePage} />
+      </Switch>
+    </Suspense>
   </>
 );
 

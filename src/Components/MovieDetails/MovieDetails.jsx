@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 
 import {
   Route,
