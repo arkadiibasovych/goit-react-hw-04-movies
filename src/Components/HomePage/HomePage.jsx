@@ -10,6 +10,7 @@ const HomePage = props => {
   useEffect(() => {
     fetchTrendingsFilms().then(setFilms);
   }, []);
+  console.log(films);
 
   return (
     <>
