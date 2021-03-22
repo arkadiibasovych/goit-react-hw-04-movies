@@ -1,6 +1,6 @@
-import { Component } from 'react';
 import { Route, NavLink, Switch } from 'react-router-dom';
 import HomePage from './Components/HomePage';
+import MoviesPage from './Components/MoviesPage';
 
 import s from './App.module.css';
 
@@ -8,10 +8,16 @@ const App = () => (
   <>
     <ul className={s.list}>
       <li className={s.listItem}>
-        <NavLink to="/" className={s.navLink} activeClassName={s.navLinkActive}>
+        <NavLink
+          exact
+          to="/"
+          className={s.navLink}
+          activeClassName={s.navLinkActive}
+        >
           Home
         </NavLink>
       </li>
+
       <li className={s.listItem}>
         <NavLink
           to="/movies"
@@ -24,7 +30,7 @@ const App = () => (
     </ul>
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/movies" />
+      <Route path="/movies" component={MoviesPage} />
       <Route component={HomePage} />
     </Switch>
   </>

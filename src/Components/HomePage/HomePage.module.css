@@ -1,0 +1,30 @@
+.title {
+  text-align: start;
+  margin: 0px;
+  padding: 50px;
+  color: tomato;
+}
+
+.galleryList {
+  padding: 0px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.galleryItem {
+  list-style-type: none;
+}
+.link {
+  font-size: 10px;
+  color: grey;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: tomato;
+}
+
+.image {
+  height: 400px;
+}

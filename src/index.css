@@ -15,3 +15,8 @@ code {
 #root {
   text-align: center;
 }
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
