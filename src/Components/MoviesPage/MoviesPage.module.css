@@ -4,3 +4,27 @@
   padding: 20px 0px 20px 50px;
   color: tomato;
 }
+.galleryList {
+  padding: 0px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.galleryItem {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.link {
+  font-size: 10px;
+  color: grey;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: tomato;
+}
+
+.image {
+  height: 400px;
+}

@@ -10,9 +10,11 @@ const fetchTrendingsFilms = () => {
 };
 
 const fetchSearchFilms = searchQuery => {
-  return axios.get(
-    `/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=true&query=${searchQuery}`,
-  );
+  return axios
+    .get(
+      `/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=true&query=${searchQuery}`,
+    )
+    .then(({ data }) => data.results);
 };
 
 const fetchMovieDetails = movie_id => {
