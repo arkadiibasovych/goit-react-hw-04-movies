@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1 className={s.title}>Trending films of the day</h1>
+      <h1 className={s.title}>Trending movies of the day</h1>
       <ul className={s.galleryList}>
         {films.map(({ id, title, name, poster_path }) => (
           <li key={id} className={s.galleryItem}>

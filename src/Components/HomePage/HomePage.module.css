@@ -1,7 +1,7 @@
 .title {
   text-align: start;
   margin: 0px;
-  padding: 50px;
+  padding: 20px 0px 20px 50px;
   color: tomato;
 }
 
@@ -13,6 +13,7 @@
 }
 .galleryItem {
   list-style-type: none;
+  margin-bottom: 20px;
 }
 .link {
   font-size: 10px;
