@@ -4,7 +4,6 @@ import { Link, useLocation, useRouteMatch } from 'react-router-dom';
 import SearchBar from '../SearchBar';
 import { fetchSearchFilms } from '../../services/filmsAPI';
 import s from './MoviesPage.module.css';
-import { validate } from 'uuid';
 
 const anonymusImg =
   'https://upload.wikimedia.org/wikipedia/commons/e/e0/Anonymous.svg';

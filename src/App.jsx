@@ -1,4 +1,4 @@
-import { Route, NavLink, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import AppBar from './Components/AppBar';
 import Loader from './Components/Loader';
