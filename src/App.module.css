@@ -1,0 +1,15 @@
+.listItem{
+list-style-type: none;
+}
+
+.navLink {
+font-size: 20px;
+color: grey;
+text-decoration: none;
+
+}
+
+.navLinkActive {
+    color:tomato;
+
+}
